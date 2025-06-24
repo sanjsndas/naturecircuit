@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Natureplanting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3a7d44;
+            --secondary: #6b8f71;
+            --accent: #f4a261;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f7;
+        }
+        
+        .header-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f9f9f7' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .privacy-point {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        
+        .organic-shape {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(58,125,68,0.05);
+            border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+            z-index: -1;
+        }
+        
+        .shears-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="relative bg-gradient-to-br from-green-700 to-green-900 text-white py-16 overflow-hidden">
+        <div class="organic-shape top-0 right-0 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="organic-shape bottom-0 left-0 transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <nav class="flex justify-between items-center mb-12">
+                <div class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-leaf mr-2"></i>
+                    <span>Natureplanting</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link font-bold" aria-current="page" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Privacy Policy</h1>
+                <p class="text-xl mb-8">Your privacy is important to us. This policy explains how we collect, use, protect, and share information about you when you use our services.</p>
+            </div>
+        </div>
+        <div class="header-wave"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-green-800">Comprehensive Privacy Policy</h2>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">1. Information Collection</h3>
+                <p>We collect various types of information when you interact with our services, including personal identification details (name, email, phone number), technical data (IP address, browser type), and usage information (pages visited, services accessed). This collection occurs through direct interactions when you register, automated technologies when you browse our site, and third-party sources like social media platforms. We only collect information necessary to provide our services and improve your experience. Collection methods include forms, cookies, and analytics tools. You have control over what information you choose to provide, though some data is essential for service functionality.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">2. Use of Personal Data</h3>
+                <p>Your personal data is used to provide and personalize our services, process transactions, and communicate with you about your account or inquiries. We analyze usage patterns to improve website functionality and develop new features. Data helps us prevent fraud, enhance security, and comply with legal obligations. Marketing communications are only sent with your consent, which you can withdraw anytime. We may use aggregated data for research and business analysis. Personal data is never sold to third parties. All processing activities have a lawful basis under applicable data protection regulations.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">3. Data Sharing Practices</h3>
+                <p>We may share your information with trusted service providers who assist in our operations under strict confidentiality agreements. These include payment processors, hosting providers, and marketing platforms. Data may be disclosed when required by law or to protect our legal rights. In business transitions like mergers, customer information may be transferred as a business asset. We never share data with third parties for their independent marketing purposes without your explicit consent. International transfers comply with appropriate safeguards like standard contractual clauses. We maintain records of all data sharing activities.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">4. Data Security Measures</h3>
+                <p>We implement robust security measures including encryption, firewalls, and access controls to protect your information. Regular security audits and vulnerability testing help maintain system integrity. Employee access is limited through role-based permissions and mandatory training. Physical security controls protect our servers and facilities. We use secure protocols for data transmission and store sensitive information in encrypted form. While we strive to protect your data, no internet transmission is completely secure. We have incident response plans to address potential breaches and will notify affected individuals when legally required.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">5. Data Retention Policy</h3>
+                <p>We retain personal data only as long as necessary to fulfill the purposes outlined in this policy unless a longer retention period is required by law. Retention periods vary based on data type and purpose. Transaction data is typically kept for 7 years for tax and accounting compliance. Inactive accounts may be deleted after 3 years of inactivity. You may request deletion of your data, which we will honor unless legal obligations require retention. Backups containing personal data are securely erased according to our retention schedule. We periodically review stored data to minimize unnecessary retention.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">6. User Rights and Choices</h3>
+                <p>You have rights to access, correct, delete, or restrict processing of your personal data. Requests can be made through our contact form and will be processed within 30 days. You may object to certain processing activities like direct marketing. Data portability allows you to receive your information in a structured format. Withdrawing consent doesn't affect the lawfulness of prior processing. We don't use fully automated decision-making with legal effects. Some rights may be limited when they affect others' rights or our legal obligations. No fee is usually charged for exercising these rights.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">7. Cookies and Tracking Technologies</h3>
+                <p>We use cookies and similar technologies to enhance functionality, analyze usage, and support marketing efforts. Essential cookies are necessary for core functionality and can't be disabled. Performance cookies help us understand how visitors interact with our site. Functionality cookies remember your preferences. Targeting cookies support personalized advertising. Most browsers allow you to manage cookie preferences through settings. Disabling cookies may affect website functionality. We honor Do Not Track signals when technically feasible. Third-party services like Google Analytics may set their own cookies according to their policies.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">8. Third-Party Links</h3>
+                <p>Our website may contain links to third-party sites not governed by this policy. We aren't responsible for the privacy practices of external sites and recommend reviewing their policies. Links to social media platforms may result in data collection by those services. Embedded content like videos may include tracking technologies from providers. We vet third-party services for compliance with data protection standards but can't guarantee their practices. Sharing information through integrated services is at your own risk. We disclaim liability for third-party actions beyond our control.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">9. Children's Privacy</h3>
+                <p>Our services aren't directed at children under 16, and we don't knowingly collect their personal information without parental consent. Parents or guardians may contact us to review, delete, or restrict processing of a child's data. We take steps to verify age when appropriate. School-related services comply with applicable student privacy laws. If we discover accidental collection of children's data without proper consent, we'll delete it promptly. Educational resources for children don't include personal data collection beyond what's necessary for functionality. We support parental control tools and child online protection initiatives.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">10. International Data Transfers</h3>
+                <p>As a global service, your data may be transferred to and processed in countries outside your residence. We ensure such transfers comply with applicable laws through safeguards like adequacy decisions or standard contractual clauses. International service providers are contractually obligated to protect your data. European Economic Area residents have specific rights under GDPR regarding cross-border transfers. You may request information about our transfer mechanisms. Processing locations are chosen to optimize service performance while maintaining security. We conduct transfer impact assessments for high-risk scenarios.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">11. California Privacy Rights</h3>
+                <p>California residents have specific rights under CCPA, including rights to know, delete, and opt-out of sale of personal information. We don't sell personal data as defined by CCPA. You may designate an authorized agent to make requests on your behalf. We won't discriminate against you for exercising privacy rights. Requests can be submitted through our designated channels and will be verified before processing. Certain information may be exempt from disclosure under CCPA exceptions. We provide at least two methods for submitting requests, including a toll-free number for California residents.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">12. GDPR Compliance</h3>
+                <p>For EU residents, we comply with General Data Protection Regulation requirements. Our Data Protection Officer oversees compliance efforts. We maintain records of processing activities and conduct data protection impact assessments for high-risk processing. Data breaches affecting EU residents are reported to authorities within 72 hours when required. We've implemented appropriate technical and organizational measures to ensure data protection by design and default. EU residents may lodge complaints with their national supervisory authority. Our legal basis for processing is transparently disclosed in this policy.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">13. Payment Information Security</h3>
+                <p>Payment transactions are processed through PCI-DSS compliant third-party processors. We don't store full credit card numbers after transaction completion. Tokenization replaces sensitive data with non-sensitive equivalents. Payment pages use TLS encryption and are regularly tested for vulnerabilities. You should never send payment information through unsecured channels like email. Disputed transactions may require retaining limited payment data for resolution. We monitor payment systems for suspicious activity and may temporarily block transactions that appear fraudulent. Recurring payments require explicit authorization and provide cancellation options.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">14. Account Security Responsibilities</h3>
+                <p>You're responsible for maintaining the confidentiality of your account credentials. We recommend using strong, unique passwords and enabling two-factor authentication where available. Notify us immediately of any unauthorized account access. Shared computers should use private browsing modes and be logged out after sessions. We'll never ask for your password via email. Account activity monitoring helps detect suspicious behavior but isn't foolproof. You may be liable for unauthorized activities conducted through your account if negligence is proven. Regular password updates enhance security.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">15. Marketing Communications</h3>
+                <p>Marketing emails are only sent with your consent and include unsubscribe options in every message. Preference centers allow customization of communication types and frequencies. We may analyze engagement to improve content relevance. Third-party marketing platforms must comply with our privacy standards. Text message programs require explicit opt-in and provide STOP instructions. You may see targeted ads based on your interactions with our website through cookie-based retargeting. Social media advertising uses platform-specific controls for ad preferences. Transactional messages about your account aren't considered marketing.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">16. User-Generated Content</h3>
+                <p>Content you post publicly may be viewed and collected by others. We moderate user content but can't guarantee complete removal of sensitive information. Consider carefully before sharing personal details in public forums. Copyrighted material shouldn't be posted without permission. We may retain removed content when necessary for legal compliance. Anonymized user content may be used for research or promotional purposes. You grant us license to display and distribute your submissions in connection with our services. False or misleading content may result in account termination.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">17. Business Transfers</h3>
+                <p>In events like mergers, acquisitions, or asset sales, customer information may be transferred as part of the transaction. We'll notify you if your data becomes subject to a different privacy policy. Bankruptcy or insolvency proceedings may also result in data transfer to third parties. We ensure that any acquiring entity adheres to similar privacy standards. You will be informed of any significant changes to how your personal data is handled. We take steps to protect your information during such transitions, including contractual obligations for data protection. If you have concerns about your data in these scenarios, you may contact us for clarification. We strive to maintain transparency throughout any business changes that affect your data.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">18. Changes to This Privacy Policy</h3>
+                <p>We may update this privacy policy periodically to reflect changes in our practices or for legal compliance. Significant changes will be communicated through prominent notices on our website or via email. We encourage you to review this policy regularly to stay informed about how we protect your information. The date of the last update will be indicated at the top of the policy. Continued use of our services after changes indicates acceptance of the new terms. We welcome feedback and questions regarding our privacy practices.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">19. Contact Information</h3>
+                <p>If you have questions or concerns about this privacy policy or our data practices, please contact us at info@natureplanting.com. You can also reach us by phone at (123) 456-7890. We aim to respond to inquiries promptly and provide assistance regarding your privacy rights. For formal requests regarding your personal data, please use our dedicated contact form on the website. We value your feedback and are committed to addressing any issues you may have.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">20. Data Breach Notification</h3>
+                <p>In the event of a data breach that affects your personal information, we will notify you as required by law. Notifications will include details about the nature of the breach, the data involved, and steps we are taking to mitigate the impact. We will also provide guidance on how you can protect yourself from potential harm. Our incident response plan includes measures to investigate and remediate breaches effectively. We take data breaches seriously and prioritize transparency and accountability in our response.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">21. Data Protection Officer</h3>
+                <p>We have appointed a Data Protection Officer (DPO) responsible for overseeing our data protection strategy and ensuring compliance with applicable laws. The DPO serves as a point of contact for individuals seeking information about their rights and our data practices. You can reach the DPO at dpo@natureplanting.com. The DPO also conducts regular audits and training to ensure our team is aware of data protection obligations. We are committed to fostering a culture of privacy within our organization.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">22. Privacy by Design</h3>
+                <p>We incorporate privacy considerations into our business processes and product development from the outset. This approach ensures that data protection is a fundamental aspect of our operations. We conduct privacy impact assessments for new projects and regularly review existing processes for compliance. Employee training emphasizes the importance of privacy and data protection. We strive to minimize data collection and retention to what is necessary for our services. Our commitment to privacy by design reflects our dedication to protecting your information.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">23. Transparency and Accountability</h3>
+                <p>We are committed to transparency in our data practices and hold ourselves accountable for compliance with this policy. Regular audits and assessments help us evaluate our adherence to privacy standards. We publish annual reports detailing our data protection efforts and any incidents that may have occurred. Feedback from users is encouraged to improve our practices. Our accountability framework includes clear roles and responsibilities for data protection within our organization. We aim to build trust through open communication about our data handling practices.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">24. User Consent Management</h3>
+                <p>We implement mechanisms for obtaining and managing user consent for data processing activities. Consent requests are clear, concise, and specific to the purpose of data collection. Users can easily withdraw consent at any time through their account settings or by contacting us. We maintain records of consent to demonstrate compliance with legal requirements. Our consent management system is regularly reviewed to ensure effectiveness. We respect user choices and prioritize their preferences regarding data processing.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">25. Data Minimization Principle</h3>
+                <p>We adhere to the principle of data minimization, collecting only the information necessary for our services. This approach reduces the risk of data breaches and enhances user privacy. We regularly review our data collection practices to eliminate unnecessary information. Users are informed about the data we collect and its purpose. Data retention policies ensure that we do not keep information longer than needed. Our commitment to data minimization reflects our respect for user privacy and data protection.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">26. Third-Party Service Providers</h3>
+                <p>We engage third-party service providers to assist with various functions, including payment processing, marketing, and analytics. These providers are carefully selected based on their commitment to data protection and compliance with applicable laws. Contracts with third parties include data protection clauses to ensure your information is handled securely. We regularly assess third-party compliance with our privacy standards. Users are informed about third-party involvement in data processing activities. We remain responsible for the handling of your data by our service providers.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">27. Data Protection Training</h3>
+                <p>All employees receive training on data protection and privacy best practices. This training is mandatory and conducted regularly to keep staff updated on legal requirements and company policies. Employees are educated on recognizing and reporting data breaches. We foster a culture of privacy awareness throughout the organization. Training materials are reviewed and updated to reflect changes in regulations. Our commitment to employee education enhances our overall data protection efforts.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">28. Privacy Notices</h3>
+                <p>We provide clear and accessible privacy notices at the point of data collection. These notices explain how we collect, use, and share personal information. Users are informed about their rights and how to exercise them. Privacy notices are regularly reviewed and updated to ensure compliance with legal requirements. We strive to make our privacy notices easy to understand and navigate. Transparency in our communication fosters trust and confidence in our data practices.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">29. Data Protection Impact Assessments</h3>
+                <p>We conduct Data Protection Impact Assessments (DPIAs) for high-risk processing activities. DPIAs help identify and mitigate potential risks to personal data. The assessments are documented and reviewed by our Data Protection Officer. We involve relevant stakeholders in the DPIA process to ensure comprehensive evaluations. DPIAs are an integral part of our project planning and development processes. Our commitment to DPIAs reflects our proactive approach to data protection.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">30. Privacy Policy Review</h3>
+                <p>This privacy policy is reviewed annually to ensure its relevance and compliance with legal requirements. Updates are made as necessary to reflect changes in our practices or regulations. Stakeholder feedback is considered during the review process. We encourage users to provide input on our privacy practices. The review process is documented to maintain accountability. Our commitment to regular policy reviews demonstrates our dedication to protecting your privacy.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">31. User Feedback and Complaints</h3>
+                <p>We welcome user feedback regarding our privacy practices and encourage you to share your concerns. Complaints can be submitted through our contact form or directly to our Data Protection Officer. We take all complaints seriously and investigate them promptly. Users will receive a response within a reasonable timeframe. Our goal is to resolve issues amicably and improve our practices based on user input. We value your opinions and strive to enhance our services.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">32. Privacy in Marketing Practices</h3>
+                <p>Our marketing practices prioritize user privacy and consent. We do not engage in unsolicited marketing and respect user preferences regarding communication. Marketing campaigns are designed to be relevant and non-intrusive. Users can opt-out of marketing communications at any time. We monitor marketing effectiveness while ensuring compliance with privacy regulations. Our commitment to ethical marketing practices reflects our respect for user privacy.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">33. Data Breach Response Plan</h3>
+                <p>We have a comprehensive data breach response plan in place to address potential incidents. The plan outlines procedures for identifying, containing, and mitigating breaches. Employees are trained on their roles in the response process. We conduct regular drills to test the effectiveness of our response plan. Communication protocols ensure timely notifications to affected individuals and authorities. Our commitment to preparedness enhances our ability to protect your data.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">34. Privacy in Product Development</h3>
+                <p>Privacy considerations are integrated into our product development lifecycle. We assess privacy risks during the design phase and implement necessary safeguards. User feedback is solicited to improve privacy features in our products. We prioritize user experience while ensuring data protection. Regular reviews of product features help maintain compliance with privacy standards. Our commitment to privacy in product development reflects our dedication to user trust.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">35. Data Protection in Research</h3>
+                <p>Research activities involving personal data are conducted in compliance with ethical standards and legal requirements. We obtain informed consent from participants and ensure data anonymization where possible. Research findings are reported in aggregate form to protect individual identities. We prioritize participant privacy throughout the research process. Our commitment to ethical research practices reflects our respect for user privacy. We regularly review research protocols to ensure compliance with data protection regulations.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">36. Privacy in Customer Support</h3>
+                <p>Customer support interactions are handled with care to protect your personal information. Support staff are trained on data protection practices and confidentiality. We use secure channels for communication and data sharing. Customer inquiries are logged for quality assurance while ensuring privacy. We strive to resolve issues efficiently while respecting user privacy. Our commitment to privacy in customer support reflects our dedication to providing excellent service.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">37. Privacy in Social Media Engagement</h3>
+                <p>We engage with users on social media platforms while respecting their privacy. Personal information shared in public forums may be visible to others. We encourage users to avoid sharing sensitive information in public comments. Our social media policies prioritize user privacy and compliance with platform guidelines. We monitor social media interactions for compliance and user feedback. Our commitment to privacy in social media reflects our dedication to user trust.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">38. Privacy in Mobile Applications</h3>
+                <p>Our mobile applications are designed with privacy in mind, incorporating features that protect user data. We provide clear information about data collection and usage in app settings. Users can manage permissions and opt-out of data sharing. Regular updates ensure compliance with privacy regulations and enhance security. We prioritize user experience while maintaining data protection. Our commitment to privacy in mobile applications reflects our dedication to user trust.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">39. Privacy in Email Communications</h3>
+                <p>Email communications are conducted securely, and we use encryption for sensitive information. Users can manage their email preferences through their account settings. We do not share email addresses with third parties without consent. Our email practices comply with anti-spam regulations and prioritize user preferences. We monitor email engagement to improve content relevance while respecting privacy. Our commitment to privacy in email communications reflects our dedication to user trust.</p>
+            </div>
+            
+            <div class="privacy-point">
+                <h3 class="text-xl font-bold mb-2 text-green-700">40. Final Thoughts on Privacy</h3>
+                <p>Your privacy is a priority for us, and we are committed to protecting your personal information. We continuously review and improve our practices to ensure compliance with evolving regulations. Transparency, accountability, and user empowerment are at the core of our privacy philosophy. We encourage you to reach out with any questions or concerns regarding your privacy. Thank you for trusting us with your information, and we look forward to serving you responsibly.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-bold">Contact Us</h3>
+                    <p>136 W 3rd St, New York, NY 10012, USA</p>
+                    <p>Email: info@natureplanting.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-yellow-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-yellow-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-yellow-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-sm">Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+                <p class="text-sm">Customer satisfaction is our priority. We strive to provide the best service possible to ensure your garden thrives.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natureplanting | Seasonal Pruning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3a7d44;
+            --secondary: #6b8f71;
+            --accent: #f4a261;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f7;
+        }
+        
+        .header-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f9f9f7' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .pruning-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .pruning-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(58,125,68,0.1) 0%, rgba(107,143,113,0.1) 100%);
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: rgba(58,125,68,0.1);
+            z-index: 0;
+        }
+        
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+        
+        .organic-shape {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(58,125,68,0.05);
+            border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+            z-index: -1;
+        }
+        
+        .shears-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .seasonal-highlight {
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+            background-color: rgba(244,162,97,0.1);
+        }
+        
+        .satisfaction-meter {
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .satisfaction-fill {
+            height: 100%;
+            background-color: var(--accent);
+            border-radius: 4px;
+        }
+        
+        .tip-card {
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .service-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .price-table th, .price-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .price-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .price-table tr:hover {
+            background-color: #e9f5eb;
+        }
+        
+        .price-badge {
+            background-color: var(--accent);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="relative bg-gradient-to-br from-green-700 to-green-900 text-white py-16 overflow-hidden">
+        <div class="organic-shape top-0 right-0 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="organic-shape bottom-0 left-0 transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <nav class="flex justify-between items-center mb-12">
+                <div class="text-2xl font-bold flex items-center">
+                    <i class="fas fa-leaf mr-2"></i>
+                    <span>Natureplanting</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link"  aria-current="page" tabindex="0">Home</a>
+                    <a href="privacy.html" class="nav-link" tabindex="0">Privacy</a>
+                    <a href="terms.html" class="nav-link" tabindex="0">Terms & Conditions</a>
+                    <a href="cookies.html" class="nav-link" tabindex="0">Cookies</a>
+                    <a href="contact.html" class="nav-link" tabindex="0">Contact Us</a>
+                </div>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            
+            <div class="max-w-2xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Your garden's rhythm. <span class="text-yellow-300">Perfectly trimmed.</span></h1>
+                <p class="text-xl mb-8">At Natureplanting, we understand that each garden has its own unique rhythm and seasonal needs. Our professional seasonal pruning services in New York are designed to work with nature's cycles, not against them. With our certified horticultural experts, your garden will receive the precise care it needs to thrive in every season.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">Get a Free Quote</a>
+                    <a href="#services" class="border-2 border-white hover:bg-white hover:text-green-900 font-bold py-3 px-6 rounded-full transition duration-300">Our Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-wave"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- About Section -->
+        <section class="mb-20">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-green-800">About Natureplanting</h2>
+                    <p class="mb-4">Founded in 2010 by master horticulturist Rachel Greenfield, Natureplanting has grown from a small local pruning service into New York's premier seasonal garden care provider. Our team of certified horticulturists combines decades of hands-on experience with cutting-edge plant science to deliver exceptional results. We understand that each plant in your garden has its own rhythm, needs, and personality - and we treat them with the individualized attention they deserve.</p>
+                    <p class="mb-4">At Natureplanting, we believe pruning is an art form that requires deep understanding of plant physiology, growth patterns, and seasonal cycles. Our approach isn't about imposing artificial shapes, but rather about enhancing each plant's natural beauty while promoting its long-term health. We see pruning as a conversation between gardener and plant, where careful observation and precise cuts yield spectacular results season after season.</p>
+                    <p>With over 600 satisfied residential and commercial clients throughout New York, we've perfected the art of maintaining gardens that flourish throughout the year. Our comprehensive service packages, educational resources, and personalized consultations set us apart from typical pruning services. We don't just cut plants - we help you develop an ongoing relationship with your garden that deepens with each passing season.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="p1.png" alt="Gardener pruning bushes" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-green-800">Our Seasonal Pruning Services</h2>
+                <p class="max-w-2xl mx-auto">Our comprehensive seasonal pruning programs are carefully designed to work with nature's calendar, providing your garden with exactly what it needs exactly when it needs it. Each service is tailored to your specific plants, microclimate, and aesthetic preferences.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="pruning-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="s1.jpeg" alt="Spring pruning" class="service-image">
+                    <div class="p-6">
+                        <div class="shears-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-green-800">Spring Awakening</h3>
+                        <p class="mb-4">Our Spring Awakening service helps plants emerge from winter dormancy with vitality and vigor. We perform careful assessments of winter damage, removing dead or broken branches with surgical precision. This gentle pruning stimulates healthy new growth while respecting each plant's natural architecture. Perfect timing in spring means your plants will develop strong structures for the growing season ahead.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Detailed assessment of winter damage</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Precision removal of dead/diseased wood</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Strategic shaping for optimal air circulation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Disease prevention treatments</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pruning-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="s2.jpeg" alt="Summer pruning" class="service-image">
+                    <div class="p-6">
+                        <div class="shears-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-green-800">Summer Maintenance</h3>
+                        <p class="mb-4">During the active growing season, our Summer Maintenance service focuses on guiding growth rather than restricting it. We carefully thin congested areas to improve air circulation and light penetration, reducing disease pressure. Strategic heading cuts maintain shape while encouraging secondary flowering on many shrubs. Our summer pruning helps maintain your garden's aesthetic while allowing plants to photosynthesize optimally during their peak growing period.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Selective thinning of dense growth</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Hedge trimming with plant health focus</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Deadheading for prolonged bloom</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Corrective pruning for storm damage</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pruning-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="s3.jpeg" alt="Fall pruning" class="service-image">
+                    <div class="p-6">
+                        <div class="shears-icon">
+ <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-green-800">Fall Preparation</h3>
+                        <p class="mb-4">Our Fall Preparation service strengthens plants for winter dormancy while setting the stage for next year's growth. We perform structural pruning to eliminate weak branch attachments that could fail under snow load. Thoughtful thinning reduces wind resistance while allowing better light penetration as days shorten. This service includes clean-up cuts that remove potential disease vectors before winter while respecting the plant's natural defense mechanisms.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Structural reinforcement pruning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Removal of weak or crossing branches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Thinning for improved light access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Pre-winter disease prevention measures</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="pruning-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="s4.jpeg" alt="Winter pruning" class="service-image">
+                    <div class="p-6">
+                        <div class="shears-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-green-800">Winter Rest</h3>
+                        <p class="mb-4">Our Winter Rest service is designed for dormant pruning, focusing on trees and shrubs to promote healthy growth in the spring. This service includes major structural work to ensure plants are well-shaped and balanced. We also perform fruit tree pruning to enhance yield and quality. By removing excess growth, we help plants conserve energy for the upcoming growing season, ensuring they emerge strong and vibrant.</p>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Major structural pruning for balance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Fruit tree pruning for optimal yield</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Size reduction for overgrown plants</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Preparation for spring growth</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Pricing List</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spring Awakening</td>
+                        <td class="price-badge">$150</td>
+                    </tr>
+                    <tr>
+                        <td>Summer Maintenance</td>
+                        <td class="price-badge">$120</td>
+                    </tr>
+                    <tr>
+                        <td>Fall Preparation</td>
+                        <td class="price-badge">$130</td>
+                    </tr>
+                    <tr>
+                        <td>Winter Rest</td>
+                        <td class="price-badge">$140</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Consultant Section -->
+        <section class="mb-20 bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Expert Pruning Consultation</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <img src="p2.jpeg" alt="Garden consultation" class="rounded-lg w-full h-auto">
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-green-700">Personalized Garden Assessment</h3>
+                    <p class="mb-4">Our certified pruning consultants provide comprehensive evaluations of your garden's needs through every season. With over 60,000 words of documented plant knowledge and care techniques, we offer the most thorough pruning consultation in New York. Our goal is to empower you with the knowledge and skills to maintain a thriving garden.</p>
+                    
+                    <div class="seasonal-highlight mb-6">
+                        <h4 class="font-bold mb-2">Seasonal Pruning Calendar</h4>
+                        <p>We'll create a customized pruning schedule tailored to your specific plants, microclimate, and aesthetic preferences. This calendar will guide you through the best times to prune, ensuring your garden remains healthy and beautiful year-round.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <h4 class="font-semibold">Plant Health Analysis</h4>
+                                <p class="text-sm">Identify disease, pests, and structural issues to ensure your plants thrive.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <h4 class="font-semibold">Growth Pattern Mapping</h4>
+                                <p class="text-sm">Understand each plant's natural form and how to enhance it through pruning.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                             <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <h4 class="font-semibold">Tool Selection Guide</h4>
+                                <p class="text-sm">Recommend proper pruning equipment to achieve the best results.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <div>
+                                <h4 class="font-semibold">Aftercare Instructions</h4>
+                                <p class="text-sm">Detailed guidelines for post-pruning care to ensure optimal recovery and growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-lg font-bold">Contact us today to schedule your personalized consultation and take the first step towards a healthier garden!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Client Feedback</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <p class="italic">"Natureplanting transformed my garden! Their seasonal pruning made a huge difference in the health and appearance of my plants. Highly recommend!"</p>
+                    <p class="font-bold mt-4">- Sarah J.</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <p class="italic">"The team was professional and knowledgeable. They provided excellent advice on maintaining my garden throughout the year."</p>
+                    <p class="font-bold mt-4">- Mark T.</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <p class="italic">"I appreciate the personalized service and attention to detail. My garden has never looked better!"</p>
+                    <p class="font-bold mt-4">- Emily R.</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg shadow-md">
+                    <p class="italic">"Natureplanting's consultation was invaluable. They helped me understand my plants better and how to care for them effectively."</p>
+                    <p class="font-bold mt-4">- John D.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Pruning Tips for Homeowners</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="tip-card p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Use Clean Tools</h3>
+                    <p>Always use clean, sharp tools to make precise cuts and prevent disease transmission. This simple step can significantly impact the health of your plants.</p>
+                </div>
+                <div class="tip-card p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Prune at the Right Time</h3>
+                    <p>Prune during the appropriate season for each plant type to encourage healthy growth. Timing is crucial for effective pruning.</p>
+                </div>
+                <div class="tip-card p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Remove Dead Branches</h3>
+                    <p>Remove any dead or diseased branches immediately to protect the rest of the plant. This helps maintain overall plant health and vigor.</p>
+                </div>
+                <div class="tip-card p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Maintain Natural Shape</h3>
+                    <p>Consider the plant's natural shape when pruning to maintain its aesthetic appeal. Pruning should enhance, not alter, the plant's natural beauty.</p>
+                </div>
+                <div class="tip-card p-4 bg-white rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Seek Professional Help</h3>
+                    <p>Don’t be afraid to ask for professional help if you’re unsure about how to prune your plants. Expert guidance can save you time and ensure the best results.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Satisfaction Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 text-center text-green-800">Customer Satisfaction</h2>
+            <p class="text-center mb-4">At Natureplanting, we prioritize customer satisfaction above all. Our commitment to quality service ensures that your garden thrives and meets your expectations. We believe that a happy customer is the best advertisement for our services.</p>
+            <div class="satisfaction-meter mb-4">
+                <div class="satisfaction-fill" style="width: 90%;"></div>
+            </div>
+            <p class="text-center">90% of our clients report being highly satisfied with our services! Join our community of happy gardeners today.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-bold">Contact Us</h3>
+                    <p>136 W 3rd St, New York, NY 10012, USA</p>
+                    <p>Email: info@natureplanting.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-yellow-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-yellow-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-yellow-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-sm">Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+                <p class="text-sm">Customer satisfaction is our priority. We strive to provide the best service possible to ensure your garden thrives.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
